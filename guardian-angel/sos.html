@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency SOS | Guardian Angel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .sos-bg {
+            background-image: url('https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .sos-btn {
+            animation: pulse 1.5s infinite;
+            box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 15px rgba(220, 38, 38, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header with New Logo -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                     alt="Guardian Angel Logo" 
+                     class="h-12 w-12 rounded-full object-cover mr-3">
+                <h1 class="text-2xl font-bold">Guardian Angel</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:underline">Home</a>
+                <a href="sos.html" class="hover:underline font-bold">SOS</a>
+                <a href="complaint.html" class="hover:underline">Complaint</a>
+                <a href="awareness.html" class="hover:underline">Awareness</a>
+                <a href="ipc.html" class="hover:underline">IPC Sections</a>
+                <a href="settings.html" class="hover:underline">Settings</a>
+            </nav>
+            <button class="md:hidden text-2xl">☰</button>
+        </div>
+    </header>
+
+    <!-- Main SOS Section -->
+    <main class="sos-bg min-h-screen flex flex-col items-center justify-center p-4">
+        <div class="bg-black bg-opacity-70 rounded-xl p-8 max-w-md w-full text-white">
+            <!-- Location Display -->
+            <div class="mb-8 text-center">
+                <div class="flex justify-center mb-2">
+                    <i class="fas fa-map-marker-alt text-red-500 text-2xl"></i>
+                </div>
+                <h2 class="text-xl font-semibold mb-1">Your Current Location</h2>
+                <p id="location" class="text-gray-300">Loading your location...</p>
+                <button id="refresh-location" class="mt-2 text-blue-400 hover:underline text-sm">
+                    <i class="fas fa-sync-alt mr-1"></i> Refresh Location
+                </button>
+            </div>
+
+            <!-- Emergency Contacts -->
+            <div class="mb-8">
+                <h2 class="text-xl font-semibold mb-4 text-center">Emergency Contacts</h2>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between bg-gray-800 bg-opacity-50 p-3 rounded-lg">
+                        <div>
+                            <h3 class="font-medium">Police</h3>
+                            <p class="text-sm text-gray-400">100</p>
+                        </div>
+                        <button class="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between bg-gray-800 bg-opacity-50 p-3 rounded-lg">
+                        <div>
+                            <h3 class="font-medium">Women's Helpline</h3>
+                            <p class="text-sm text-gray-400">1091</p>
+                        </div>
+                        <button class="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between bg-gray-800 bg-opacity-50 p-3 rounded-lg">
+                        <div>
+                            <h3 class="font-medium">Ambulance</h3>
+                            <p class="text-sm text-gray-400">108</p>
+                        </div>
+                        <button class="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOS Button -->
+            <div class="text-center">
+                <button id="sos-button" class="sos-btn bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-6 px-12 rounded-full transition duration-300">
+                    <i class="fas fa-bell mr-2"></i> EMERGENCY SOS
+                </button>
+                <p class="mt-3 text-sm text-gray-300">Press and hold for 3 seconds to activate</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Guardian Angel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Location Services
+        function updateLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const lat = position.coords.latitude;
+                        const lng = position.coords.longitude;
+                        document.getElementById('location').textContent = 
+                            `Latitude: ${lat.toFixed(4)}, Longitude: ${lng.toFixed(4)}`;
+                    },
+                    (error) => {
+                        document.getElementById('location').textContent = 
+                            'Location access denied. Please enable location services.';
+                    }
+                );
+            } else {
+                document.getElementById('location').textContent = 
+                    'Geolocation is not supported by your browser.';
+            }
+        }
+
+        // SOS Button Functionality
+        let sosTimer;
+        const sosButton = document.getElementById('sos-button');
+
+        sosButton.addEventListener('mousedown', startSosTimer);
+        sosButton.addEventListener('touchstart', startSosTimer);
+        sosButton.addEventListener('mouseup', cancelSosTimer);
+        sosButton.addEventListener('mouseleave', cancelSosTimer);
+        sosButton.addEventListener('touchend', cancelSosTimer);
+
+        function startSosTimer() {
+            sosTimer = setTimeout(triggerSos, 3000); // 3 seconds
+        }
+
+        function cancelSosTimer() {
+            clearTimeout(sosTimer);
+        }
+
+        function triggerSos() {
+            alert('EMERGENCY ALERT ACTIVATED!\nYour location has been shared with emergency contacts.');
+            // In a real implementation, this would send the alert to backend services
+        }
+
+        // Initialize
+        document.getElementById('refresh-location').addEventListener('click', updateLocation);
+        updateLocation();
+    </script>
+</body>
+</html>
