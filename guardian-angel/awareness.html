@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Awareness | Guardian Angel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .safety-card {
+            transition: all 0.3s ease;
+        }
+        .safety-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header with New Logo -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                     alt="Guardian Angel Logo" 
+                     class="h-12 w-12 rounded-full object-cover mr-3">
+                <h1 class="text-2xl font-bold">Guardian Angel</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:underline">Home</a>
+                <a href="sos.html" class="hover:underline">SOS</a>
+                <a href="complaint.html" class="hover:underline">Complaint</a>
+                <a href="awareness.html" class="hover:underline font-bold">Awareness</a>
+                <a href="ipc.html" class="hover:underline">IPC Sections</a>
+                <a href="settings.html" class="hover:underline">Settings</a>
+            </nav>
+            <button class="md:hidden text-2xl">☰</button>
+        </div>
+    </header>
+
+    <!-- Main Awareness Section -->
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="bg-blue-600 text-white py-16">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Safety Awareness</h1>
+                <p class="text-xl max-w-3xl mx-auto">Empowering you with knowledge and resources to stay safe in various situations</p>
+            </div>
+        </section>
+
+        <!-- Tab Navigation -->
+        <div class="container mx-auto px-4 -mt-8">
+            <div class="flex overflow-x-auto space-x-2 pb-2">
+                <button data-tab="personal" class="tab-btn flex-shrink-0 bg-white text-blue-600 px-6 py-3 rounded-t-lg font-medium active">
+                    <i class="fas fa-user-shield mr-2"></i> Personal Safety
+                </button>
+                <button data-tab="cyber" class="tab-btn flex-shrink-0 bg-white text-gray-600 px-6 py-3 rounded-t-lg font-medium">
+                    <i class="fas fa-laptop-code mr-2"></i> Cyber Safety
+                </button>
+                <button data-tab="travel" class="tab-btn flex-shrink-0 bg-white text-gray-600 px-6 py-3 rounded-t-lg font-medium">
+                    <i class="fas fa-car-side mr-2"></i> Travel Safety
+                </button>
+                <button data-tab="legal" class="tab-btn flex-shrink-0 bg-white text-gray-600 px-6 py-3 rounded-t-lg font-medium">
+                    <i class="fas fa-gavel mr-2"></i> Legal Rights
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="container mx-auto px-4 py-8">
+            <!-- Personal Safety Tab -->
+            <div id="personal-tab" class="tab-content active">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Tip 1 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Street Safety" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Street Safety</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Walk confidently and be aware of your surroundings</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Keep valuables concealed and bags zipped</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Plan your route in advance and stick to well-lit areas</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tip 2 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Public Transport" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Public Transport</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Wait in designated, well-lit areas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Have your ticket/pass ready to avoid delays</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Sit near the driver or in busy carriages</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tip 3 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Night Safety" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Night Safety</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Share your location with trusted contacts</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Pre-book licensed taxis or use ride-sharing apps</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Avoid walking alone if possible</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cyber Safety Tab -->
+            <div id="cyber-tab" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Cyber Tip 1 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Online Privacy" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Online Privacy</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Review privacy settings on social media</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Be cautious about sharing personal information</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Use strong, unique passwords for each account</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cyber Tip 2 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Cyber Stalking" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Cyber Stalking</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Document all unwanted communications</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Block and report offenders on platforms</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Consider changing usernames/emails if needed</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Cyber Tip 3 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Scam Prevention" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Scam Prevention</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Verify unexpected requests for money/info</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Look for HTTPS and padlock icons on websites</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Be wary of too-good-to-be-true offers</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Safety Tab -->
+            <div id="travel-tab" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Travel Tip 1 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Taxi Safety" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Taxi Safety</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Check license plate matches app details</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Share ride details with trusted contacts</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Sit in the back seat for personal space</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Travel Tip 2 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Hotel Safety" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Hotel Safety</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Request rooms near elevators, not ground floor</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Use all door locks and security features</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Keep valuables in room safe when possible</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Travel Tip 3 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Public Places" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Public Places</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Be aware of emergency exits in new locations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Keep drinks in sight at all times</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Trust your instincts about people/situations</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Rights Tab -->
+            <div id="legal-tab" class="tab-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Legal Tip 1 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Workplace Rights" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Workplace Rights</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>You have the right to a harassment-free workplace</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Document incidents with dates/times/witnesses</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Report to HR or appropriate authorities</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Legal Tip 2 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Domestic Violence" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Domestic Violence</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>You have legal protection under PWDVA 2005</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Can file for protection orders from courts</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Access to shelters and support services</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Legal Tip 3 -->
+                    <div class="safety-card bg-white rounded-xl shadow-md overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                             alt="Cyber Laws" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Cyber Laws</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>IT Act Section 66E protects privacy violations</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Section 67 covers obscene content sharing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Can file complaints with cyber crime cells</span>
+                                </li>
+                            </ul>
+                            <button class="mt-4 text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-download mr-2"></i> Download Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Guardian Angel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active', 'text-blue-600');
+                    btn.classList.add('text-gray-600');
+                });
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active', 'text-blue-600');
+                button.classList.remove('text-gray-600');
+                const tabId = button.getAttribute('data-tab') + '-tab';
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Download Button Functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Download')) {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('Download started! (In a real implementation, this would download the PDF)');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
