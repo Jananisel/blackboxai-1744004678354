@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPC Sections | Guardian Angel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .ipc-card {
+            transition: all 0.3s ease;
+        }
+        .ipc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .search-highlight {
+            background-color: #ffeb3b;
+            padding: 0 2px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header with New Logo -->
+    <header class="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://images.pexels.com/photos/4475523/pexels-photo-4475523.jpeg" 
+                     alt="Guardian Angel Logo" 
+                     class="h-12 w-12 rounded-full object-cover mr-3">
+                <h1 class="text-2xl font-bold">Guardian Angel</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:underline">Home</a>
+                <a href="sos.html" class="hover:underline">SOS</a>
+                <a href="complaint.html" class="hover:underline">Complaint</a>
+                <a href="awareness.html" class="hover:underline">Awareness</a>
+                <a href="ipc.html" class="hover:underline font-bold">IPC Sections</a>
+                <a href="settings.html" class="hover:underline">Settings</a>
+            </nav>
+            <button class="md:hidden text-2xl">☰</button>
+        </div>
+    </header>
+
+    <!-- Main IPC Sections Section -->
+    <main class="min-h-screen py-12">
+        <div class="container mx-auto px-4">
+            <!-- Search and Filter Section -->
+            <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+                <h1 class="text-3xl font-bold text-center mb-6">Indian Penal Code Sections</h1>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Key legal provisions for women's safety and rights in India. 
+                    Click on any section for detailed information and official references.
+                </p>
+                
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input 
+                            type="text" 
+                            id="ipc-search" 
+                            placeholder="Search IPC sections (e.g. '354', 'harassment')" 
+                            class="w-full p-4 pl-12 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                        >
+                        <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 mt-4 justify-center">
+                        <button data-filter="all" class="filter-btn px-4 py-2 bg-blue-100 text-blue-600 rounded-full active">
+                            All Sections
+                        </button>
+                        <button data-filter="assault" class="filter-btn px-4 py-2 bg-purple-100 text-purple-600 rounded-full">
+                            Assault
+                        </button>
+                        <button data-filter="harassment" class="filter-btn px-4 py-2 bg-red-100 text-red-600 rounded-full">
+                            Harassment
+                        </button>
+                        <button data-filter="cyber" class="filter-btn px-4 py-2 bg-green-100 text-green-600 rounded-full">
+                            Cyber Crime
+                        </button>
+                        <button data-filter="domestic" class="filter-btn px-4 py-2 bg-yellow-100 text-yellow-600 rounded-full">
+                            Domestic Violence
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IPC Sections Grid -->
+            <div id="ipc-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Section 354 -->
+                <div class="ipc-card bg-white rounded-xl shadow-md overflow-hidden" data-category="assault">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 font-bold rounded-lg px-3 py-1 mr-3">354</div>
+                            <h3 class="text-xl font-semibold">Assault or criminal force to woman with intent to outrage her modesty</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600">
+                            <p>Whoever assaults or uses criminal force to any woman, intending to outrage or knowing it to be likely that he will thereby outrage her modesty, shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="https://indiankanoon.org/doc/1278284/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Full Text
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 354A -->
+                <div class="ipc-card bg-white rounded-xl shadow-md overflow-hidden" data-category="harassment">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 text-purple-600 font-bold rounded-lg px-3 py-1 mr-3">354A</div>
+                            <h3 class="text-xl font-semibold">Sexual harassment and punishment for sexual harassment</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600">
+                            <p>A man committing any of the following acts—physical contact and advances involving unwelcome and explicit sexual overtures; or a demand or request for sexual favours; or showing pornography against the will of a woman; or making sexually coloured remarks, shall be guilty of sexual harassment.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="https://indiankanoon.org/doc/1105391/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Full Text
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 354D -->
+                <div class="ipc-card bg-white rounded-xl shadow-md overflow-hidden" data-category="harassment cyber">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="bg-red-100 text-red-600 font-bold rounded-lg px-3 py-1 mr-3">354D</div>
+                            <h3 class="text-xl font-semibold">Stalking</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600">
+                            <p>Any man who follows a woman and contacts, or attempts to contact such woman to foster personal interaction repeatedly despite a clear indication of disinterest by such woman; or monitors the use by a woman of the internet, email or any other form of electronic communication, commits the offence of stalking.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="https://indiankanoon.org/doc/1105391/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Full Text
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 375 -->
+                <div class="ipc-card bg-white rounded-xl shadow-md overflow-hidden" data-category="assault">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 text-blue-600 font-bold rounded-lg px-3 py-1 mr-3">375</div>
+                            <h3 class="text-xl font-semibold">Rape</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600">
+                            <p>A man is said to commit "rape" if he—penetrates his penis, to any extent, into the vagina, mouth, urethra or anus of a woman or makes her to do so with him or any other person; or manipulates any part of the body of a woman so as to cause penetration; or applies his mouth to the vagina, anus, urethra of a woman.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="https://indiankanoon.org/doc/1278284/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Full Text
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 498A -->
+                <div class="ipc-card bg-white rounded-xl shadow-md overflow-hidden" data-category="domestic">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="bg-yellow-100 text-yellow-600 font-bold rounded-lg px-3 py-1 mr-3">498A</div>
+                            <h3 class="text-xl font-semibold">Husband or relative of husband of a woman subjecting her to cruelty</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600">
+                            <p>Whoever, being the husband or the relative of the husband of a woman, subjects such woman to cruelty shall be punished with imprisonment for a term which may extend to three years and shall also be liable to fine. "Cruelty" means any willful conduct likely to drive the woman to commit suicide or to cause grave injury or danger to life, limb or health.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="https://indiankanoon.org/doc/1803036/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Full Text
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 509 -->
+                <div class="ipc-card bg-white rounded-xl shadow-md overflow-hidden" data-category="harassment">
+                    <div class="p-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 text-purple-600 font-bold rounded-lg px-3 py-1 mr-3">509</div>
+                            <h3 class="text-xl font-semibold">Word, gesture or act intended to insult the modesty of a woman</h3>
+                        </div>
+                        <div class="mt-4 text-gray-600">
+                            <p>Whoever, intending to insult the modesty of any woman, utters any word, makes any sound or gesture, or exhibits any object, intending that such word or sound shall be heard, or that such gesture or object shall be seen, by such woman, or intrudes upon the privacy of such woman, shall be punished with simple imprisonment for a term which may extend to one year, or with fine, or with both.</p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-gray-100">
+                            <a href="https://indiankanoon.org/doc/1278284/" target="_blank" class="text-blue-500 hover:underline flex items-center">
+                                <i class="fas fa-external-link-alt mr-2"></i> View Full Text
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Resources -->
+            <div class="mt-12 bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4">Additional Legal Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="text-lg font-semibold mb-2">Protection of Women from Domestic Violence Act, 2005</h3>
+                        <p class="text-gray-600 mb-3">Provides protection to wives and female live-in partners from domestic violence by husbands and male live-in partners or their relatives.</p>
+                        <a href="https://wcd.nic.in/act/protection-women-domestic-violence-act-2005" target="_blank" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                    <div class="border-l-4 border-purple-500 pl-4">
+                        <h3 class="text-lg font-semibold mb-2">Sexual Harassment of Women at Workplace Act, 2013</h3>
+                        <p class="text-gray-600 mb-3">Seeks to protect women from sexual harassment at their place of work and provides mechanism for redressal of complaints.</p>
+                        <a href="https://wcd.nic.in/act/sexual-harassment-women-workplace-act-2013" target="_blank" class="text-blue-500 hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Guardian Angel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Search Functionality
+        const ipcSearch = document.getElementById('ipc-search');
+        const ipcContainer = document.getElementById('ipc-container');
+        const ipcCards = document.querySelectorAll('.ipc-card');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+
+        ipcSearch.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            
+            ipcCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                const sectionNumber = card.querySelector('div[class^="bg-"]').textContent;
+                const isVisible = text.includes(searchTerm) || sectionNumber.includes(searchTerm);
+                
+                card.style.display = isVisible ? 'block' : 'none';
+                
+                // Highlight matching text
+                if (searchTerm && isVisible) {
+                    const regex = new RegExp(searchTerm, 'gi');
+                    const highlightedText = card.innerHTML.replace(
+                        regex, 
+                        match => `<span class="search-highlight">${match}</span>`
+                    );
+                    card.innerHTML = highlightedText;
+                }
+            });
+        });
+
+        // Filter Functionality
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                
+                ipcCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        card.style.display = categories.includes(filter) ? 'block' : 'none';
+                    }
+                });
+            });
+        });
+
+        // Click to expand/collapse details
+        ipcCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Don't toggle if clicking on a link
+                if (!e.target.closest('a')) {
+                    const details = this.querySelector('div:nth-child(2)');
+                    details.classList.toggle('line-clamp-3');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
